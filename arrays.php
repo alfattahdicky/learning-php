@@ -1,6 +1,6 @@
 <?php
   
-  /**
+  /*
     Array
       - Array is special variable, which can hold more than one value at a Runtime
       - Get length of array use count()
@@ -52,8 +52,71 @@
     for($row = 0; $row < count($food); $row++) {
       // echo $i;
       for($column = 0; $column < 2; $column++) {
-        echo $food[$row][$column];
+        // echo $food[$row][$column];
+        // echo '<br>';
       }
     };
     
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+  <style>
+    .container {
+      margin: 3em;
+      /* display: flex; */
+      gap: 2em;
+    }
+    .box {
+      background-color: aquamarine;
+      width: 20px;
+      height: 20px;
+      padding: 1em 1.2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <?php 
+      // $nums = [[1,2,3],[4,5,6],[7,8,9]];
+      $persons = [
+        [
+          "name" => 'Dicky al Fattah',
+          "age" => 20,
+          "city" => 'Jakarta',
+        ],
+        [
+          "name" => 'Azka Faiz Ramadhan',
+          "age" => 17,
+          "city" => 'Jakarta',
+        ]
+        
+      ]
+    ?>
+    
+    <h3>Data Penduduk</h3>
+
+    <?php // foreach($nums as $num) : ?>
+      <?php // foreach($num as $result) : ?>
+        <!-- <div class="box"> <?= $result ?> </div> -->
+      <?php // endforeach?>
+    <?php // endforeach?>
+    
+    
+    <?php foreach($persons as $person) : ?>
+      <ul>
+        <li> <?= $person['name'] ?> </li>
+        <li> <?= $person['age'] ?> </li>
+        <li> <?= $person['city'] ?> </li>
+      </ul>
+    <?php endforeach?>
+    
+  
+  </div>
+</body>
+</html>
