@@ -25,7 +25,7 @@
   
   function globalScope() {
      // call variable in inside function
-    echo "Angka 3: " . $num_three; 
+    // echo "Angka 3: " . $num_three; 
   }
   // test();
   echo $num_three; // 3
@@ -35,7 +35,7 @@
     $say = "\nHello";
     // echo $say;
   }
-  // localScope();
+  localScope();
   
   // Error call variable in outside function
   // echo $say;
