@@ -2,7 +2,7 @@
   // Koneksi di baris pertama ke db
   $db = mysqli_connect("localhost", "root", "", "phpdasar");
 
-  // Get/query tabel person
+  // Get/query data tabel person
   
   function query($query) {
     global $db;
