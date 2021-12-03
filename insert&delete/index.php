@@ -1,5 +1,5 @@
 <?php
-  require 'function.php';
+  require('function.php');
   $persons = query('SELECT * FROM person');
 ?>
 
@@ -14,6 +14,9 @@
 </head>
 <body>
   <h1>Daftar Orang</h1>  
+
+  <a href="tambah.php">Tambah Data Person</a>
+  <br><br>
 
   <table border="1" cellpadding="10" cellspacing="0">
 
@@ -32,7 +35,7 @@
       <td> <?= $count ?> </td>
       <td>
         <a href="">Ubah</a> |
-        <a href="">Hapus</a>
+        <a href="hapus.php?id=<?= $person['id']; ?> " onclick="return confirm('Yakin Dihapus?')">Hapus</a>
       </td>
       <td><img src="img/<?= $person['gambar'] ?>" alt="" width="50"></td>
       <td> <?= $person['nama'] ?> </td>
